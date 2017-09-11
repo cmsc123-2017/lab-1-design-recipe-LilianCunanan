@@ -1,0 +1,49 @@
+// --> double
+//gets the 15% of this items price if said price is over 1000
+/* newAmount(){
+ *   return 0;
+ * }
+ * 
+ * boolean isLessOrEq1K(){
+ *   return 0;
+ * }
+`*/
+//TEMPLATE 
+/* Fields:
+ * ...this.name...-string
+ * ...this.price...-double
+ * Methods:
+ * ...newAmount...-->double
+ * ...isLessOrEq1K...-->bool
+ */
+
+class Item{
+  string Name;
+  double price;
+  
+  //constant
+  final double MAX = 1000.0;
+  final double DIS_PER = 0.15;
+  
+  Item(string Name, double price){
+    this.name = name;
+    this.price = price;
+  }
+  
+  boolean isLessOrEq1K(){
+    if (this.price <= MAX){
+      return true;
+    }
+    else 
+      return false;
+  }
+  
+  double newAmount(){
+    if(isLessOrEq1K() == true){
+      return this.price;
+    }
+    else{
+      return this.price - (this.price * DIS_PER);
+    }
+  }
+}
