@@ -14,7 +14,7 @@ public class ItemTest extends TestCase {
    * many "testSomething" methods in this class as you wish, and each
    * one will be called when running JUnit over this class.)
    */
-  public void testTripCreated(){
+  public void testCreated(){
     Item t = new Item("bag",3000);
     
     assertEquals("bag", t.name);
