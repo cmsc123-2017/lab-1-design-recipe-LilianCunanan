@@ -5,15 +5,16 @@ import junit.framework.TestCase;
  * Every method starting with the word "test" will be called when running
  * the test with JUnit.
  */
+
 public class JeepneyTripTest extends TestCase {
-  
+
   /**
    * A test method.
-   * (Replace "X" with a name describing the test.  You may write as
+   * (Replace "X" with a name describing the test. You may write as
    * many "testSomething" methods in this class as you wish, and each
    * one will be called when running JUnit over this class.)
    */
-  public void testTripCreated() {
+  public void testTripCreated(){
     JeepneyTrip t = new JeepneyTrip(5, 5, 3);
     
     assertEquals(5.0, t.distance);
@@ -21,13 +22,13 @@ public class JeepneyTripTest extends TestCase {
     assertEquals(3, t.discountPassengers);
   }
   
-  public void testChangeNoDiscount() {
+  public void testChangeNoDiscount(){
     JeepneyTrip t = new JeepneyTrip(5, 1, 0);
     
     assertEquals(3.0, t.fareChange(10));
   }
   
-  public void testChangeDiscount() {
+  public void testChangeDiscount(){
     JeepneyTrip t = new JeepneyTrip(5, 1, 1);
     
     assertEquals(4.0, t.fareChange(10));
